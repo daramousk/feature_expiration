@@ -1,0 +1,25 @@
+<odoo>
+	<data>
+		<record model="ir.ui.view" id="feature_expiration.list_module_expiration">
+			<field name="name">Module Expiration</field>
+			<field name="model">module.expiration</field>
+			<field name="arch" type="xml">
+				<tree editable="top">
+					<field name="module_name" />
+					<field name="expiration_date" />
+				</tree>
+			</field>
+		</record>
+
+
+		<record model="ir.actions.act_window" id="feature_expiration.open_module_expiration">
+			<field name="name">Module Expiration</field>
+			<field name="res_model">module.expiration</field>
+			<field name="view_mode">tree</field>
+		</record>
+
+		<menuitem name="Expirations" id="feature_expiration.menu_expirations" parent="base.menu_administration" />
+
+		<menuitem name="Expiring Modules" id="feature_expiration.menu_module_expiration" parent="feature_expiration.menu_expirations" action="feature_expiration.open_module_expiration" />
+	</data>
+</odoo>

@@ -1,0 +1,16 @@
+<odoo>
+	<data>
+	
+		<record id="ir_cron_check_expired_module" model="ir.cron">
+			<field name="name">Check For Expired Modules</field>
+			<field name="interval_number">1</field>
+			<field name="interval_type">days</field>
+			<field name="numbercall">-1</field>
+			<field name="doall" eval="False" />
+			<field name="model" eval="'module.expiration'" />
+			<field name="function" eval="'check_expired_modules'" />
+			<field name="args">()</field>
+		</record>
+
+	</data>
+</odoo>
